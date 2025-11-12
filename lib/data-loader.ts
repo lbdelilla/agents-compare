@@ -41,7 +41,7 @@ export async function loadFeatures(): Promise<Feature[]> {
 
 export async function loadAgentFeatureSupport(agentId?: string, featureId?: string): Promise<AgentFeatureSupport[]> {
   const supportDir = join(DATA_DIR, 'support')
-  const agents = ['cursor', 'windsurf', 'claude-code']
+  const agents = ['cursor', 'windsurf', 'claude-code', 'github-copilot']
   
   let allSupport: AgentFeatureSupport[] = []
   
