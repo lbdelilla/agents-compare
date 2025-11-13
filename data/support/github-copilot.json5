@@ -42,6 +42,107 @@
       examples: [],
       last_verified: "2024-01-15",
       sources: ["https://docs.github.com/en/copilot"]
+    },
+    {
+      feature_id: "automatic-context-awareness",
+      support_level: "partial",
+      notes: "GitHub Copilot automatically analyzes the current file, imports, and nearby files to provide context-aware suggestions. However, context is limited compared to full-codebase agents and doesn't include external resources or deep project understanding.",
+      examples: [
+        "Analyzes current file and imported modules automatically",
+        "Suggests code based on function signatures in the file",
+        "Uses comments and variable names for context"
+      ],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide-with-github-copilot"
+      ]
+    },
+    {
+      feature_id: "broad-ide-integration",
+      support_level: "yes",
+      notes: "GitHub Copilot has excellent IDE integration across multiple platforms including VS Code, Visual Studio, JetBrains IDEs (IntelliJ, PyCharm, etc.), Neovim, and Emacs, making it one of the most widely supported AI coding assistants.",
+      examples: [
+        "VS Code extension with inline suggestions",
+        "JetBrains plugin for IntelliJ IDEA, PyCharm, WebStorm, etc.",
+        "Neovim plugin via copilot.vim",
+        "Emacs integration via copilot.el",
+        "Visual Studio extension"
+      ],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot",
+        "https://github.com/features/copilot"
+      ]
+    },
+    {
+      feature_id: "claude-4-support",
+      support_level: "no",
+      notes: "GitHub Copilot is built on OpenAI's Codex model (based on GPT-3.5 and GPT-4), not Anthropic's Claude models. There is no support for Claude 4 or any Claude model family.",
+      examples: [],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot"
+      ]
+    },
+    {
+      feature_id: "console-error-integration",
+      support_level: "no",
+      notes: "GitHub Copilot does not have integrated web preview functionality or console error capture. It works within the code editor context only and doesn't monitor runtime errors from running applications.",
+      examples: [],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot/using-github-copilot"
+      ]
+    },
+    {
+      feature_id: "dedicated-instruction-file",
+      support_level: "no",
+      notes: "GitHub Copilot does not support dedicated instruction files like .cursorrules or AGENT.md. Configuration is limited to IDE settings and there's no file-based way to provide persistent instructions to the AI.",
+      examples: [],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot/configuring-github-copilot"
+      ]
+    },
+    {
+      feature_id: "fine-grained-instruction-control",
+      support_level: "no",
+      notes: "GitHub Copilot offers limited customization options. You can enable/disable suggestions per language and block suggestions matching public code, but there's no support for fine-grained rules, glob patterns, or context-specific instructions.",
+      examples: [],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-settings-on-githubcom"
+      ]
+    },
+    {
+      feature_id: "interactive-element-selection",
+      support_level: "no",
+      notes: "GitHub Copilot does not have UI preview or element selection capabilities. It operates purely within the code editor and doesn't interact with rendered applications or allow selecting UI elements to reference in prompts.",
+      examples: [],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot"
+      ]
+    },
+    {
+      feature_id: "live-web-preview",
+      support_level: "no",
+      notes: "GitHub Copilot does not include an integrated web preview feature. It focuses on code suggestions within the IDE and doesn't render or preview web applications.",
+      examples: [],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot/using-github-copilot"
+      ]
+    },
+    {
+      feature_id: "supports-scoped-instructions",
+      support_level: "no",
+      notes: "GitHub Copilot does not support scoped instructions at global, project, or file levels. All configuration is done through IDE settings and applies uniformly across the workspace.",
+      examples: [],
+      last_verified: "2025-11-12",
+      sources: [
+        "https://docs.github.com/en/copilot/configuring-github-copilot"
+      ]
     }
   ]
 } 
