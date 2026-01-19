@@ -134,7 +134,7 @@ export default async function HomePage() {
               structured data for maximum discoverability.
             </p>
             <p className="text-gray-400">
-                              <a href="https://github.com/4geeks/agents-compare" className="text-blue-400 hover:underline">
+                              <a href="https://github.com/breatheco-de/agents-compare" className="text-blue-400 hover:underline">
                 View our GitHub repository
               </a> to see the data sources and contribute updates.
             </p>
