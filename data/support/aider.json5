@@ -1,0 +1,119 @@
+// Support matrix for Aider AI coding agent
+// This file defines how well Aider supports various features
+{
+  agent_id: "aider",
+  feature_support: [
+    {
+      feature_id: "automatic-context-awareness",
+      support_level: "partial",
+      notes: "Aider builds a repo-map — a high-level index of classes, functions, and signatures across the entire codebase — to give the LLM structural awareness. However, you must manually add specific files to the chat context; Aider does not automatically include all files in every prompt.",
+      examples: ["Repo-map providing codebase structure to the LLM", "Manually adding files with /add to include them in context"],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/repomap.html"]
+    },
+    {
+      feature_id: "broad-ide-integration",
+      support_level: "no",
+      notes: "Aider is a terminal-only tool. It has no native IDE plugin or extension. You run it alongside any editor, but there is no official VS Code, JetBrains, or other IDE integration. Some community scripts exist but are unofficial.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/usage/tips.html"]
+    },
+    {
+      feature_id: "claude-4-support",
+      support_level: "yes",
+      notes: "Aider supports Claude Sonnet 4.6 and Claude Opus 4.6 via the Anthropic API. These are the recommended models for best results. Use --model anthropic/claude-sonnet-4-6 or --model anthropic/claude-opus-4-6.",
+      examples: ["aider --model anthropic/claude-opus-4-6 for complex refactors", "aider --model anthropic/claude-sonnet-4-6 for everyday coding tasks"],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/llms/anthropic.html"]
+    },
+    {
+      feature_id: "claude3-support",
+      support_level: "yes",
+      notes: "Aider supports Claude 3 models (Haiku, Sonnet, Opus) via the Anthropic API using the --model flag.",
+      examples: ["aider --model anthropic/claude-3-5-sonnet-20241022"],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/llms/anthropic.html"]
+    },
+    {
+      feature_id: "console-error-integration",
+      support_level: "no",
+      notes: "Aider operates entirely in the terminal and has no browser integration. It cannot monitor or capture browser console errors from running applications.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "context-window",
+      support_level: "yes",
+      notes: "Aider inherits the context window of whichever LLM is selected. When using Claude Sonnet 4.6 or Opus 4.6, the full 200K token context window is available. Aider's repo-map is designed to fit within token budgets efficiently.",
+      examples: ["Using Claude Sonnet 4.6 for 200K context on large codebases"],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/repomap.html"]
+    },
+    {
+      feature_id: "dedicated-instruction-file",
+      support_level: "yes",
+      notes: "Aider supports CONVENTIONS.md (or any file specified with --read) for persistent project-level instructions. You can also use .aider.conf.yml for default flags and settings per project.",
+      examples: ["CONVENTIONS.md specifying coding standards followed every session", ".aider.conf.yml defining default model and auto-commit behavior"],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/config/aider_conf.html"]
+    },
+    {
+      feature_id: "filesystem-access",
+      support_level: "yes",
+      notes: "Aider can create, edit, and delete files across the project. Changes are applied directly to the working directory and optionally committed to git automatically.",
+      examples: ["Creating new module files as part of a feature implementation", "Editing multiple files in a single operation"],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/usage/tips.html"]
+    },
+    {
+      feature_id: "fine-grained-instruction-control",
+      support_level: "no",
+      notes: "Aider does not support file-pattern or directory-scoped instruction rules. Instructions are project-wide via CONVENTIONS.md or .aider.conf.yml. There is no equivalent to Cursor's .cursor/rules glob-pattern system.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "interactive-element-selection",
+      support_level: "no",
+      notes: "Aider is a terminal-only tool with no visual UI or ability to select interactive elements from a web or desktop interface.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "live-web-preview",
+      support_level: "no",
+      notes: "Aider has no built-in web preview. It is a CLI coding tool with no browser or UI rendering capabilities.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "mcp-support",
+      support_level: "no",
+      notes: "Aider does not natively support MCP (Model Context Protocol) servers. It has its own tool/plugin ecosystem distinct from MCP. Some workarounds exist via shell commands, but native MCP integration is not available as of early 2026.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/usage/tips.html"]
+    },
+    {
+      feature_id: "planner-strategy",
+      support_level: "partial",
+      notes: "Aider's Architect mode separates planning from execution: a powerful model plans the changes, then a faster/cheaper model executes them. This provides a planning layer, but Aider does not show an explicit step-by-step plan to the user for approval before execution.",
+      examples: ["Using Architect mode with Claude Opus 4.6 for planning and Haiku 4.5 for editing"],
+      last_verified: "2026-03-16",
+      sources: ["https://aider.chat/docs/usage/modes.html"]
+    },
+    {
+      feature_id: "supports-scoped-instructions",
+      support_level: "no",
+      notes: "Aider applies instructions globally via CONVENTIONS.md or .aider.conf.yml. There is no mechanism for scoping instructions to specific directories, file types, or tasks.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    }
+  ]
+}

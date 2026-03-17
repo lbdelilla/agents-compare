@@ -1,0 +1,119 @@
+// Support matrix for Zed AI coding agent
+// This file defines how well Zed AI supports various features
+{
+  agent_id: "zed-ai",
+  feature_support: [
+    {
+      feature_id: "automatic-context-awareness",
+      support_level: "yes",
+      notes: "Zed AI automatically includes the current file and open tabs in its context. In agentic mode it can scan the broader project. The assistant panel shows which files are included in the current context.",
+      examples: ["Assistant answering questions about the current file without manual context addition", "Agentic mode scanning project files to understand architecture"],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev/docs/assistant/assistant-panel"]
+    },
+    {
+      feature_id: "broad-ide-integration",
+      support_level: "no",
+      notes: "Zed AI is exclusive to the Zed editor. It does not have plugins for VS Code, JetBrains, or any other IDE. Users must use the Zed editor itself to access Zed AI.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev"]
+    },
+    {
+      feature_id: "claude-4-support",
+      support_level: "yes",
+      notes: "Zed AI supports Claude Sonnet 4.6 and Claude Opus 4.6 via Anthropic API integration. Users can select these models in the model picker in the assistant panel.",
+      examples: ["Selecting Claude Sonnet 4.6 for inline edits", "Using Claude Opus 4.6 for complex agentic tasks"],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev/docs/assistant/model-selection"]
+    },
+    {
+      feature_id: "claude3-support",
+      support_level: "yes",
+      notes: "Zed AI supports Claude 3 models (Haiku, Sonnet, Opus) via the Anthropic API. Users can switch between model generations in the model picker.",
+      examples: ["Using Claude 3.5 Sonnet for code generation tasks"],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev/docs/assistant/model-selection"]
+    },
+    {
+      feature_id: "console-error-integration",
+      support_level: "no",
+      notes: "Zed AI does not include browser console integration. It can view terminal output within the editor, but does not have a built-in browser or browser DevTools connection.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "context-window",
+      support_level: "yes",
+      notes: "Zed AI inherits the full context window of the selected model. When using Claude Sonnet 4.6 or Opus 4.6, the 200K token context is available. Zed's context management UI shows token usage in the assistant panel.",
+      examples: ["Processing large files using Claude's 200K token context window"],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev/docs/assistant/assistant-panel"]
+    },
+    {
+      feature_id: "dedicated-instruction-file",
+      support_level: "partial",
+      notes: "Zed supports adding custom instructions via the assistant settings and through MCP Context Servers. A project-level .rules file can provide persistent instructions. This is less standardized than CLAUDE.md or .github/copilot-instructions.md.",
+      examples: ["Adding project-specific coding guidelines via assistant settings"],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev/docs/assistant/configuration"]
+    },
+    {
+      feature_id: "filesystem-access",
+      support_level: "yes",
+      notes: "In agentic mode, Zed AI can create, edit, and delete files in the project. It can also run terminal commands as part of task execution.",
+      examples: ["Agentic mode creating new component files", "Running npm install as part of a feature implementation task"],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev/docs/assistant/agents"]
+    },
+    {
+      feature_id: "fine-grained-instruction-control",
+      support_level: "no",
+      notes: "Zed does not support file-pattern or directory-scoped instruction targeting. Instructions are applied globally via settings or the assistant panel.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "interactive-element-selection",
+      support_level: "no",
+      notes: "Zed AI does not support visual UI element selection. It is a code editor without a built-in browser or visual preview panel.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "live-web-preview",
+      support_level: "no",
+      notes: "Zed does not include a built-in web preview panel. Web applications must be previewed in an external browser.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "mcp-support",
+      support_level: "yes",
+      notes: "Zed natively supports MCP (Model Context Protocol) servers via its 'Context Servers' feature. MCP tools are accessible from the assistant panel and in agentic mode, enabling integration with databases, APIs, and custom tooling.",
+      examples: ["Connecting a documentation MCP server to provide project-specific context", "Using an MCP database tool to query records during a coding task"],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev/docs/assistant/context-servers"]
+    },
+    {
+      feature_id: "planner-strategy",
+      support_level: "partial",
+      notes: "Zed's agentic mode can execute multi-step tasks, but it does not present an explicit plan for user approval before starting. It executes steps sequentially and requests approval for destructive actions.",
+      examples: ["Agentic mode executing a multi-file refactor step by step"],
+      last_verified: "2026-03-16",
+      sources: ["https://zed.dev/docs/assistant/agents"]
+    },
+    {
+      feature_id: "supports-scoped-instructions",
+      support_level: "no",
+      notes: "Zed does not provide scoped instruction mechanisms at the directory or file-type level. All instructions are global.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    }
+  ]
+}

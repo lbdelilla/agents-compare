@@ -14,18 +14,18 @@
     {
       feature_id: "broad-ide-integration",
       support_level: "yes",
-      notes: "Claude Code has official plugins for VS Code, JetBrains.",
-      examples: ["Using Claude Code in VS Code for code generation", "Integrating with JetBrains for advanced refactoring"],
-      last_verified: "2025-07-08",
-      sources: ["https://docs.anthropic.com/en/docs/claude-code/ide-integrations"]
+      notes: "Claude Code has official plugins for VS Code and the full JetBrains family (IntelliJ IDEA, PyCharm, WebStorm, etc.), plus community Neovim integration via claude-code.nvim.",
+      examples: ["Using Claude Code in VS Code for code generation", "Integrating with JetBrains for advanced refactoring", "Using claude-code.nvim for Neovim integration"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.anthropic.com/en/docs/claude-code/ide-integrations", "https://github.com/anthropics/claude-code.nvim"]
     },
     {
       feature_id: "claude-4-support",
       support_level: "yes",
-      notes: "Natively supports Claude 4 models, including Sonnet 4 and Opus 4, for advanced code generation and analysis.",
-      examples: ["Using Claude 4 Sonnet for complex refactoring tasks"],
-      last_verified: "2025-07-08",
-      sources: []
+      notes: "Natively supports Claude Sonnet 4.6 (default) and Claude Opus 4.6 (most powerful) for advanced code generation and analysis. Note: there is no model called 'Claude 4' — Anthropic uses a versioned tier system.",
+      examples: ["Using Claude Sonnet 4.6 for everyday coding tasks", "Switching to Claude Opus 4.6 for complex architectural decisions"],
+      last_verified: "2026-03-16",
+      sources: ["https://www.anthropic.com/news/claude-sonnet-4-6-claude-opus-4-6"]
     },
     {
       feature_id: "claude3-support",
@@ -46,10 +46,10 @@
     {
       feature_id: "context-window",
       support_level: "yes",
-      notes: "Supports large context windows up to 200k tokens, enabling handling of extensive codebases.",
-      examples: ["Processing entire codebases in a single context for refactoring"],
-      last_verified: "2025-07-08",
-      sources: []
+      notes: "Supports large context windows up to 200K tokens standard. A 1M token context window is available in beta (2026), enabling handling of very large codebases in a single session.",
+      examples: ["Processing entire codebases in a single context for refactoring", "Holding an entire monorepo in context during a large refactor (1M beta)"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.anthropic.com/en/docs/claude-code/context-management"]
     },
     {
       feature_id: "dedicated-instruction-file",
@@ -69,11 +69,11 @@
     },
     {
       feature_id: "fine-grained-instruction-control",
-      support_level: "no",
-      notes: "No information on fine-grained instruction control has been found",
-      examples: ["Enforcing specific linting rules for TypeScript files only"],
-      last_verified: "2025-07-08",
-      sources: []
+      support_level: "partial",
+      notes: "Claude Code supports CLAUDE.md files that can be placed at different directory levels (project root, subdirectory) to provide context-specific instructions per scope. However, it does not support glob pattern matching like Cursor's .cursor/rules system.",
+      examples: ["Placing a CLAUDE.md in /frontend with React-specific rules", "Project-level CLAUDE.md defining global coding standards"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.anthropic.com/en/docs/claude-code/settings"]
     },
     {
       feature_id: "interactive-element-selection",

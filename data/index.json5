@@ -19,7 +19,13 @@
     "claude-code",
     "cursor",
     "github-copilot",
-    "windsurf"
+    "windsurf",
+    "amazon-q-developer",
+    "aider",
+    "zed-ai",
+    "google-jules",
+    "devin-ai",
+    "replit-agent"
   ],
   "comparisons": [
     "claude-code-vs-cursor",

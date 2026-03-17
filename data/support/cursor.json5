@@ -13,35 +13,35 @@
     },
     {
       feature_id: "broad-ide-integration",
-      support_level: "partial",
-      notes: "Primarily operates as a VS Code fork with native AI integration; supports VS Code extensions but lacks direct plugin support for other IDEs like JetBrains or Xcode.",
-      examples: ["Using Cursor with VS Code extensions in its native environment"],
-      last_verified: "2025-07-08",
-      sources: ["https://cursor.com", "https://docs.cursor.sh/extensions"]
+      support_level: "yes",
+      notes: "Cursor operates as its own VS Code-based IDE and since early 2026 also supports JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm) via the Agent Client Protocol (ACP), expanding beyond its original VS Code-only scope.",
+      examples: ["Using Cursor natively as a VS Code fork", "Running Cursor's AI agent inside IntelliJ IDEA via ACP"],
+      last_verified: "2026-03-16",
+      sources: ["https://cursor.com/blog/jetbrains-support"]
     },
     {
       feature_id: "claude-4-support",
       support_level: "yes",
-      notes: "Supports Claude 4 models (e.g., Sonnet 4, Opus 4) alongside other frontier models, with model selection available based on task requirements.",
-      examples: ["Using Claude 4 Sonnet for complex refactoring tasks"],
-      last_verified: "2025-07-08",
+      notes: "Supports the latest Claude models including Claude Sonnet 4.6 and Claude Opus 4.6 alongside other frontier models (GPT-4.1, GPT-4o, Gemini). Model selection is available per conversation.",
+      examples: ["Using Claude Sonnet 4.6 for complex refactoring tasks", "Switching to Claude Opus 4.6 for architectural planning"],
+      last_verified: "2026-03-16",
       sources: ["https://cursor.com/pricing"]
     },
     {
       feature_id: "claude3-support",
       support_level: "yes",
-      notes: "Native support for Claude 3 models (Opus, Sonnet, Haiku), including Claude 3.7 Sonnet, for advanced code generation and analysis.",
-      examples: ["Using Claude 3 Opus for multi-file code generation"],
-      last_verified: "2025-07-08",
-      sources: ["https://docs.cursor.sh/models"]
+      notes: "Supports the full Claude model family including Claude Sonnet 4.5/4.6, Claude Haiku 4.5, and Claude Opus 4.6 for advanced code generation and analysis.",
+      examples: ["Using Claude Sonnet 4.6 for multi-file code generation"],
+      last_verified: "2026-03-16",
+      sources: ["https://cursor.com/models"]
     },
     {
       feature_id: "console-error-integration",
-      support_level: "partial",
-      notes: "Integrates with the BrowserTools MCP plugin to connect to browser console logs, allowing the AI to see and fix errors during web development.",
-      examples: ["Fixing JavaScript runtime errors detected in the terminal"],
-      last_verified: "2025-07-08",
-      sources: []
+      support_level: "yes",
+      notes: "Cursor 2.0 (November 2025) introduced a native integrated browser with Chrome DevTools access, allowing the AI agent to directly read console errors, network requests, and runtime exceptions without any external plugin.",
+      examples: ["Agent automatically detecting and fixing a React hydration error from the console", "Reading network request failures from DevTools to diagnose API issues"],
+      last_verified: "2026-03-16",
+      sources: ["https://cursor.com/changelog/2-0"]
     },
     {
       feature_id: "context-window",
@@ -77,19 +77,19 @@
     },
     {
       feature_id: "interactive-element-selection",
-      support_level: "no",
-      notes: "",
-      examples: ["Modifying styles of a selected button in a web preview"],
-      last_verified: "2025-07-08",
-      sources: []
+      support_level: "yes",
+      notes: "Cursor 2.2 introduced a Visual Editor with drag-and-drop repositioning, inline color pickers, and grid/flexbox layout controls. Developers can click any element in the live preview and directly manipulate its styles, with AI generating the corresponding code changes.",
+      examples: ["Dragging a button to reposition it and having Cursor update the CSS", "Using the color picker on a heading to change its brand color"],
+      last_verified: "2026-03-16",
+      sources: ["https://cursor.com/changelog/2-2"]
     },
     {
       feature_id: "live-web-preview",
-      support_level: "no",
-      notes: "No particular Cursor feature helps with this",
-      examples: ["Testing a React application directly in the editor"],
-      last_verified: "2025-07-08",
-      sources: []
+      support_level: "yes",
+      notes: "Cursor 2.0 (November 2025) introduced an integrated browser panel that renders the running web application live inside the editor, enabling side-by-side coding and visual testing without leaving Cursor.",
+      examples: ["Testing a React application directly in Cursor's built-in browser", "Iterating on a landing page with live visual feedback alongside the code"],
+      last_verified: "2026-03-16",
+      sources: ["https://cursor.com/changelog/2-0"]
     },
     {
       feature_id: "mcp-support",

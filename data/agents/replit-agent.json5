@@ -1,0 +1,52 @@
+{
+  "id": "replit-agent",
+  "name": "Replit Agent",
+  "aliases": ["Replit AI Agent", "Replit Ghostwriter Agent", "Replit AI"],
+  "provider": "Replit",
+  "website": "https://replit.com/ai",
+  "supported_ide": ["Replit (browser)", "Replit Desktop"],
+  "updated_at": "2026-03-16",
+  "description": "Replit Agent is an AI coding agent built into the Replit cloud development environment. It can build, run, and deploy full applications entirely from natural language prompts, with no local setup required. Replit Agent handles the entire development lifecycle — from writing code and installing dependencies to configuring databases and deploying to production — all within Replit's browser-based IDE. It is designed to make software development accessible to non-developers and to accelerate prototyping for professionals.",
+  "faq": [
+    {
+      "question": "What is Replit Agent and what can it build?",
+      "answer": "Replit Agent is an AI that builds full applications from a text prompt inside Replit's cloud IDE. You describe what you want — a web app, REST API, Discord bot, database-backed tool, etc. — and Replit Agent writes the code, installs packages, sets up databases, and deploys the app. No local environment setup is required."
+    },
+    {
+      "question": "Which AI models power Replit Agent?",
+      "answer": "Replit Agent uses a combination of models including Anthropic Claude (Sonnet and Haiku) and other models selected based on task type. Replit also has a model routing layer that selects the best model for each subtask (code generation, debugging, planning, etc.)."
+    },
+    {
+      "question": "Do I need coding experience to use Replit Agent?",
+      "answer": "No. Replit Agent is designed to be usable by non-developers. You describe what you want in plain English and the agent handles the implementation. However, developers can also use it to accelerate prototyping by iterating on the generated code directly in Replit's editor."
+    },
+    {
+      "question": "How does Replit Agent deploy applications?",
+      "answer": "Replit Agent can deploy applications directly to Replit's cloud hosting infrastructure (Replit Deployments) with a single click or as part of the agent workflow. Deployed apps get a public URL instantly. Replit supports web apps, APIs, bots, and scheduled jobs."
+    },
+    {
+      "question": "Does Replit Agent support databases?",
+      "answer": "Yes. Replit Agent can provision and configure Replit's built-in database options: Replit DB (a simple key-value store), PostgreSQL (via Neon), and other database types. It writes the connection code and schema setup automatically."
+    },
+    {
+      "question": "How much does Replit Agent cost?",
+      "answer": "Replit Agent is available on the Replit Core plan (~$25/month) and higher tiers. A free tier provides limited AI usage. Agent usage is measured in Replit's 'cycles' or included in subscription plans. Replit Teams and Enterprise plans include higher agent usage limits."
+    },
+    {
+      "question": "Can Replit Agent work with an existing codebase?",
+      "answer": "Yes. You can import a GitHub repository into Replit and then use Replit Agent to modify, extend, or debug the existing code. Replit Agent reads the imported codebase and can make targeted edits or implement new features on top of it."
+    },
+    {
+      "question": "Does Replit Agent support version control?",
+      "answer": "Replit has built-in Git integration. Replit Agent can commit changes to git history within Replit's environment. You can also push changes to GitHub from Replit. Full two-way GitHub sync is available."
+    },
+    {
+      "question": "What programming languages does Replit Agent support?",
+      "answer": "Replit Agent supports any language available on Replit's platform, including Python, JavaScript/TypeScript, Node.js, Ruby, Go, Java, C/C++, Rust, PHP, and many others. Replit runs any language in its cloud environment without local installation."
+    },
+    {
+      "question": "How does Replit Agent compare to tools like Devin or Bolt?",
+      "answer": "Replit Agent is most similar to Bolt.new and v0 in that it targets rapid app creation from prompts in a browser-based environment with instant deployment. Devin is more focused on complex, long-horizon engineering tasks on existing codebases. Replit Agent's unique advantage is Replit's fully integrated cloud IDE, built-in hosting, and database — all in one platform without needing any external services."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "amazon-q-developer",
+  "name": "Amazon Q Developer",
+  "aliases": ["Q Developer", "Amazon Q", "AWS Q", "CodeWhisperer"],
+  "provider": "Amazon Web Services",
+  "website": "https://aws.amazon.com/q/developer/",
+  "supported_ide": ["VSCode", "JetBrains IDEs", "Eclipse", "Visual Studio"],
+  "updated_at": "2026-03-16",
+  "description": "Amazon Q Developer is AWS's AI coding assistant and the successor to Amazon CodeWhisperer. It offers code completion, multi-file agentic tasks, security scanning, and deep integration with AWS services. Recognized as a Leader in the 2025 Gartner Magic Quadrant for AI Code Assistants for the second consecutive year.",
+  "faq": [
+    {
+      "question": "What is the difference between Amazon Q Developer and Amazon CodeWhisperer?",
+      "answer": "Amazon Q Developer is the direct successor to Amazon CodeWhisperer, which was retired. Q Developer includes all CodeWhisperer capabilities (inline code suggestions, security scanning) plus new agentic features, natural language chat, and deeper AWS service integration."
+    },
+    {
+      "question": "Which AI models does Amazon Q Developer use?",
+      "answer": "Amazon Q Developer uses Amazon's own proprietary models trained specifically on code and AWS documentation. It does not use OpenAI or Anthropic models directly, though it leverages Amazon Bedrock's infrastructure."
+    },
+    {
+      "question": "What IDEs does Amazon Q Developer support?",
+      "answer": "Amazon Q Developer supports VS Code, JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm, etc.), Eclipse, and Visual Studio. It also integrates with the AWS Console and AWS CLI."
+    },
+    {
+      "question": "Is Amazon Q Developer free to use?",
+      "answer": "Amazon Q Developer offers a free Individual tier with limited monthly completions and chat interactions. The Pro tier costs $19/user/month and includes higher usage limits, additional security scanning features, and team management capabilities."
+    },
+    {
+      "question": "How does Amazon Q Developer integrate with AWS services?",
+      "answer": "Amazon Q Developer has native awareness of AWS services, allowing it to suggest AWS SDK calls, generate CloudFormation templates, explain IAM policies, diagnose cost anomalies, and assist with AWS CLI commands. It can also chat about your deployed AWS resources directly."
+    },
+    {
+      "question": "Does Amazon Q Developer support agentic coding tasks?",
+      "answer": "Yes. Amazon Q Developer's agent mode can autonomously implement features across multiple files, write tests, and make infrastructure changes. It breaks complex tasks into steps and executes them with user approval."
+    },
+    {
+      "question": "Does Amazon Q Developer perform security scanning?",
+      "answer": "Yes. Amazon Q Developer includes built-in security scanning powered by the same engine as Amazon CodeGuru. It can detect vulnerabilities like SQL injection, hardcoded credentials, and insecure cryptography, and suggest fixes inline."
+    },
+    {
+      "question": "How does Amazon Q Developer handle privacy and data security?",
+      "answer": "Amazon Q Developer does not use your code to train its models by default. Enterprise customers can enable additional data isolation. It is SOC 2 compliant and integrates with AWS IAM for access control."
+    },
+    {
+      "question": "Can Amazon Q Developer work with non-AWS projects?",
+      "answer": "Yes. While Amazon Q Developer's AWS integration is a key differentiator, it works as a general-purpose coding assistant for any project. It supports all major programming languages and frameworks regardless of cloud provider."
+    },
+    {
+      "question": "Does Amazon Q Developer support code transformation?",
+      "answer": "Yes. Amazon Q Developer includes a Code Transformation feature that can automatically upgrade Java applications (e.g., Java 8/11 to Java 17/21) or migrate .NET applications, handling dependency updates and code changes automatically."
+    }
+  ]
+}

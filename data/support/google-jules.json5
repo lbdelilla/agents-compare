@@ -1,0 +1,119 @@
+// Support matrix for Google Jules AI coding agent
+// This file defines how well Google Jules supports various features
+{
+  agent_id: "google-jules",
+  feature_support: [
+    {
+      feature_id: "automatic-context-awareness",
+      support_level: "yes",
+      notes: "Jules clones the entire repository into a sandboxed cloud environment for each task, giving it full awareness of the codebase, dependencies, and project structure without any manual context configuration by the user.",
+      examples: ["Jules reading the full repo structure to understand dependencies before implementing a feature", "Using test files to understand expected behavior before fixing a bug"],
+      last_verified: "2026-03-16",
+      sources: ["https://jules.google"]
+    },
+    {
+      feature_id: "broad-ide-integration",
+      support_level: "no",
+      notes: "Jules operates entirely through a web interface at jules.google and through GitHub. It has no IDE plugin or extension for VS Code, JetBrains, or any other editor. Interaction is via browser or GitHub issues.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://jules.google"]
+    },
+    {
+      feature_id: "claude-4-support",
+      support_level: "no",
+      notes: "Jules is powered exclusively by Google's Gemini 2.0 model family. It does not support Anthropic's Claude models.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://jules.google"]
+    },
+    {
+      feature_id: "claude3-support",
+      support_level: "no",
+      notes: "Jules uses Google's Gemini 2.0 models only. Anthropic Claude models are not supported.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://jules.google"]
+    },
+    {
+      feature_id: "console-error-integration",
+      support_level: "no",
+      notes: "Jules works asynchronously in a cloud sandbox and has no browser console integration. It can read test output and terminal logs from the repo's test suite, but does not connect to live browser consoles.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "context-window",
+      support_level: "yes",
+      notes: "Jules ingests the full repository into its context using Gemini 2.0's large context window (up to 1M tokens). This enables it to reason across very large codebases in a single pass.",
+      examples: ["Processing a large monorepo to understand the full dependency graph before making changes"],
+      last_verified: "2026-03-16",
+      sources: ["https://jules.google"]
+    },
+    {
+      feature_id: "dedicated-instruction-file",
+      support_level: "partial",
+      notes: "Jules reads repository files including README and documentation as part of its context. There is no official named instruction file (like CLAUDE.md) yet, but Jules can be guided via issue descriptions and comments.",
+      examples: ["Providing detailed task requirements in a GitHub issue for Jules to follow"],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "filesystem-access",
+      support_level: "yes",
+      notes: "Jules has full filesystem access to the cloned repository in its sandboxed cloud environment. It can create, edit, and delete any files in the repository as part of implementing a task.",
+      examples: ["Jules creating new files and editing existing ones to implement a feature", "Jules updating configuration files as part of a dependency upgrade"],
+      last_verified: "2026-03-16",
+      sources: ["https://jules.google"]
+    },
+    {
+      feature_id: "fine-grained-instruction-control",
+      support_level: "no",
+      notes: "Jules does not have a file-pattern or directory-level instruction system. All task instructions are provided in the task description when assigning work to Jules.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "interactive-element-selection",
+      support_level: "no",
+      notes: "Jules is an asynchronous agent working in a cloud sandbox. It has no visual UI element selection capability.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "live-web-preview",
+      support_level: "no",
+      notes: "Jules operates in a cloud code execution environment. It can run tests and build steps, but does not provide a live web preview of running applications.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "mcp-support",
+      support_level: "no",
+      notes: "Jules does not support MCP (Model Context Protocol) servers. It operates in an isolated cloud sandbox and does not connect to external tools via MCP.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "planner-strategy",
+      support_level: "yes",
+      notes: "Jules generates a step-by-step implementation plan before writing code, which is shown to the user for approval. Only after the plan is approved does Jules proceed with implementation. This is a core part of the Jules workflow.",
+      examples: ["Jules presenting a plan showing which files will be changed and what the approach will be", "User reviewing and approving the plan before Jules begins coding"],
+      last_verified: "2026-03-16",
+      sources: ["https://jules.google"]
+    },
+    {
+      feature_id: "supports-scoped-instructions",
+      support_level: "no",
+      notes: "Jules does not support scoped or hierarchical instruction systems. Instructions are provided per-task in the task description.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    }
+  ]
+}

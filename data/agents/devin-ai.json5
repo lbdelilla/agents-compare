@@ -1,0 +1,52 @@
+{
+  "id": "devin-ai",
+  "name": "Devin",
+  "aliases": ["Devin AI", "Cognition Devin", "Devin software engineer"],
+  "provider": "Cognition AI",
+  "website": "https://devin.ai",
+  "supported_ide": ["Browser", "Slack", "VS Code (remote)"],
+  "updated_at": "2026-03-16",
+  "description": "Devin is an autonomous AI software engineer by Cognition AI, marketed as the first AI agent capable of completing end-to-end software engineering tasks independently. Devin works in a fully isolated cloud environment equipped with a shell, code editor, and browser. It can plan and execute complex, multi-step engineering tasks — from cloning a repo and writing code to deploying applications and fixing bugs — with minimal human intervention. Devin is accessible via web, Slack integration, and a VS Code extension.",
+  "faq": [
+    {
+      "question": "What is Devin and what makes it different from other AI coding tools?",
+      "answer": "Devin is described as an autonomous AI software engineer. Unlike pair programmers (Copilot, Cursor) that assist while you code, Devin works independently to complete full engineering tasks: setting up environments, writing and testing code, debugging, and deploying. It operates in a cloud sandbox with its own shell, browser, and editor, and reports back when the task is done."
+    },
+    {
+      "question": "Which AI model powers Devin?",
+      "answer": "Cognition AI has not publicly disclosed which underlying model(s) power Devin. Cognition has trained Devin using reinforcement learning on software engineering tasks, and the system may use a combination of proprietary fine-tuned models and external LLMs."
+    },
+    {
+      "question": "How much does Devin cost?",
+      "answer": "Devin uses a session-based pricing model. As of early 2026, pricing is approximately $500/month for a Teams plan that includes a set number of agent compute units (ACUs) representing task runtime. Enterprise pricing is available. A free trial is offered. See devin.ai for current pricing."
+    },
+    {
+      "question": "What kinds of tasks can Devin handle autonomously?",
+      "answer": "Devin can handle: setting up codebases from scratch, implementing features end-to-end, fixing bugs from issue descriptions, writing and running tests, deploying to cloud providers, refactoring code, updating dependencies, writing documentation, and completing tasks from GitHub issues or Jira tickets."
+    },
+    {
+      "question": "How does Devin interact with my codebase?",
+      "answer": "Devin clones your repository into a private cloud environment and has access to a terminal, code editor, and browser. It can run commands, install packages, write code, run tests, and browse documentation. You observe its progress in real time via a session dashboard and can intervene or provide feedback at any point."
+    },
+    {
+      "question": "Can I use Devin with Slack?",
+      "answer": "Yes. Devin integrates with Slack, allowing team members to assign tasks to Devin directly from Slack messages. Devin reports progress and asks clarifying questions in the Slack thread."
+    },
+    {
+      "question": "Does Devin support GitHub and Jira integration?",
+      "answer": "Yes. Devin integrates with GitHub to work on issues and pull requests directly. It can also connect to Jira to pick up tickets and implement the requested changes. These integrations allow Devin to work asynchronously on your backlog."
+    },
+    {
+      "question": "Is Devin's cloud environment secure?",
+      "answer": "Devin runs in isolated cloud environments (one per session) with no cross-session data sharing. Cognition AI uses encrypted credential storage and does not retain repository code after sessions end. Enterprise plans include additional compliance controls."
+    },
+    {
+      "question": "Can Devin browse the web?",
+      "answer": "Yes. Devin has access to a cloud browser in its sandbox environment. It uses this to read documentation, search for solutions, look up API references, and navigate to any web resources needed to complete a task."
+    },
+    {
+      "question": "What are Devin's limitations?",
+      "answer": "Devin performs best on self-contained tasks with clear requirements. It can struggle with deeply ambiguous tasks requiring business context, tasks requiring persistent human decisions mid-stream, proprietary internal tools it has no documentation for, and very large tasks beyond 4-8 hours of human effort. Human review of all PRs before merging is strongly recommended."
+    }
+  ]
+}

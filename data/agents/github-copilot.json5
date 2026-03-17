@@ -5,15 +5,16 @@
     "provider": "GitHub",
     "website": "https://github.com/features/copilot",
     "supported_ide": ["VSCode", "JetBrains IDEs", "Neovim", "Emacs", "Visual Studio"],
-    "description": "An AI-powered code completion tool that suggests code snippets, functions, and entire blocks based on context and comments.",
+    "description": "An AI-powered coding assistant deeply integrated with GitHub. Evolved from a code completion tool into a full coding agent with Agent Mode (GA 2025), Copilot Workspace, MCP support, custom instruction files, and multi-model support including Claude Opus 4.6 and Sonnet 4.6.",
+    "updated_at": "2026-03-16",
     "faq": [
       {
         "question": "What models does GitHub Copilot use?",
-        "answer": "GitHub Copilot uses OpenAI's Codex model, which is based on GPT-3.5 and GPT-4. It's specifically trained on code from public repositories to provide relevant code suggestions."
+        "answer": "GitHub Copilot now supports multiple models via a model picker: GPT-4.1, GPT-4o, Claude Sonnet 4.6, Claude Opus 4.6, Claude Haiku 4.5, and Gemini 2.0. Users can select the model per task directly in the Copilot chat panel. Claude Opus 4.6 became generally available in February 2026."
       },
       {
         "question": "How does GitHub Copilot differ from other AI coding assistants?",
-        "answer": "GitHub Copilot focuses primarily on code completion and inline suggestions. While it has chat capabilities, it's designed to be less intrusive and more focused on helping you write code faster rather than taking over the entire coding process."
+        "answer": "GitHub Copilot has evolved significantly. It now includes Agent Mode (autonomous multi-file coding), Copilot Workspace (full task planning and execution), MCP server support, and custom instruction files (.github/copilot-instructions.md). It remains the most widely deployed AI coding tool with the broadest IDE support."
       },
       {
         "question": "Can GitHub Copilot work with private repositories?",
@@ -25,7 +26,7 @@
       },
       {
         "question": "Can I customize the suggestions in GitHub Copilot?",
-        "answer": "You can control whether to accept or reject suggestions, and there are settings to enable/disable suggestions for specific languages or block suggestions matching public code. However, you cannot directly fine-tune the suggestion algorithm itself."
+        "answer": "Yes. You can create a .github/copilot-instructions.md file in your repository to provide persistent, natural-language instructions (coding standards, preferred libraries, response style). Since November 2025, multiple .instructions.md files with YAML frontmatter allow path-specific and agent-specific rules."
       },
       {
         "question": "Does GitHub Copilot support all programming languages?",
@@ -57,7 +58,7 @@
       },
       {
         "question": "How does GitHub Copilot compare to other code completion tools like Tabnine or Amazon CodeWhisperer?",
-        "answer": "GitHub Copilot, powered by OpenAI's Codex, excels in GitHub integration and context-aware suggestions. Tabnine uses proprietary models, while CodeWhisperer is AWS-focused. Copilot's strength lies in its broad IDE support and repository context."
+        "answer": "GitHub Copilot's strengths are its deep GitHub integration, broadest IDE support (VS Code, JetBrains, Neovim, Emacs, Visual Studio), multi-model selection, and Agent Mode. Amazon Q Developer (successor to CodeWhisperer) is AWS-focused. Tabnine specializes in on-premise enterprise deployments with zero data transmission."
       },
       {
         "question": "Is there a way to disable GitHub Copilot temporarily?",
@@ -77,7 +78,15 @@
       },
       {
         "question": "What is the pricing model for GitHub Copilot?",
-        "answer": "GitHub Copilot offers a free tier for individuals with limited features, and paid plans like Copilot Pro ($10/month) and Copilot Enterprise for businesses. See https://docs.github.com/en/copilot/plans for details."
+        "answer": "GitHub Copilot offers: Free ($0, limited completions and chat), Pro ($10/month, unlimited completions), Pro+ ($39/month, access to all premium models including Claude Opus 4.6), Business ($19/user/month, team management), Enterprise ($39/user/month, custom policies and knowledge bases). See https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot for details."
+      },
+      {
+        "question": "What is Agent Mode in GitHub Copilot?",
+        "answer": "Agent Mode (generally available in VS Code since February 2025) allows Copilot to autonomously complete multi-step tasks: it reads your codebase, creates a plan, writes and modifies files, runs commands, and iterates until the task is done — all with your approval at each step."
+      },
+      {
+        "question": "Does GitHub Copilot support MCP servers?",
+        "answer": "Yes. GitHub Copilot supports MCP (Model Context Protocol) servers in VS Code, JetBrains, and Xcode as of 2025. MCP tools are accessible directly from the Agent Mode panel, allowing Copilot to interact with databases, APIs, and custom tools."
       }
     ]
   }

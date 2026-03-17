@@ -1,0 +1,119 @@
+// Support matrix for Devin AI coding agent
+// This file defines how well Devin supports various features
+{
+  agent_id: "devin-ai",
+  feature_support: [
+    {
+      feature_id: "automatic-context-awareness",
+      support_level: "yes",
+      notes: "Devin clones the full repository into its cloud environment and autonomously explores the codebase to understand architecture, dependencies, and conventions before starting work. No manual context setup is required.",
+      examples: ["Devin mapping the codebase structure before implementing a new feature", "Automatically reading README and documentation files to understand the project"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai"]
+    },
+    {
+      feature_id: "broad-ide-integration",
+      support_level: "partial",
+      notes: "Devin is primarily a web-based agent (devin.ai dashboard). It also has a VS Code extension for observing and interacting with Devin sessions, and a Slack integration. It does not have native JetBrains or other IDE plugins.",
+      examples: ["Monitoring a Devin session from the VS Code extension", "Assigning tasks to Devin via Slack"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai/docs"]
+    },
+    {
+      feature_id: "claude-4-support",
+      support_level: "no",
+      notes: "Devin uses Cognition AI's proprietary models. It does not support Anthropic's Claude Sonnet 4.6 or Claude Opus 4.6 models, nor does it offer a user-facing model picker.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai"]
+    },
+    {
+      feature_id: "claude3-support",
+      support_level: "no",
+      notes: "Devin uses Cognition AI's proprietary internal models and does not support Claude 3 or any Anthropic model family.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai"]
+    },
+    {
+      feature_id: "console-error-integration",
+      support_level: "yes",
+      notes: "Devin has access to a cloud browser in its sandbox and can observe browser console errors while testing web applications it has deployed or started. This is part of its end-to-end debugging capability.",
+      examples: ["Devin opening a browser to test a web app, reading console errors, and fixing the underlying code"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai"]
+    },
+    {
+      feature_id: "context-window",
+      support_level: "yes",
+      notes: "Devin maintains persistent context across a full session, including shell history, code changes, test results, and browsing history. Its effective context spans the entire session rather than a fixed token limit, as it summarizes and references prior steps.",
+      examples: ["Maintaining awareness of all code changes made across a 2-hour session"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai"]
+    },
+    {
+      feature_id: "dedicated-instruction-file",
+      support_level: "partial",
+      notes: "Devin reads project README and documentation as part of its setup. You can also provide persistent instructions to Devin via 'Playbooks' — reusable instruction templates that tell Devin how to work on your codebase (coding standards, deployment steps, etc.).",
+      examples: ["Creating a Devin Playbook defining the project's testing conventions and deployment steps"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai/docs/playbooks"]
+    },
+    {
+      feature_id: "filesystem-access",
+      support_level: "yes",
+      notes: "Devin has full filesystem access within its cloud sandbox environment. It can create, read, update, and delete any files in the cloned repository, install packages, and run build tools.",
+      examples: ["Creating new service files and updating configuration during a feature implementation", "Removing deprecated files as part of a codebase cleanup task"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai"]
+    },
+    {
+      feature_id: "fine-grained-instruction-control",
+      support_level: "partial",
+      notes: "Devin's Playbooks system allows defining reusable instructions for specific types of tasks. However, there is no file-pattern or directory-level instruction scoping comparable to Cursor's .cursor/rules system.",
+      examples: ["A Playbook for frontend tasks with React-specific conventions", "A Playbook for backend API development with specific testing requirements"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai/docs/playbooks"]
+    },
+    {
+      feature_id: "interactive-element-selection",
+      support_level: "no",
+      notes: "Devin can interact with web UIs via its cloud browser (clicking, filling forms), but this is for task completion purposes, not a visual UI element selection feature for developers to select elements to modify.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "live-web-preview",
+      support_level: "yes",
+      notes: "Devin can start web application servers in its sandbox and take screenshots or interact with the running app via its cloud browser. Users can observe what Devin sees in the session dashboard.",
+      examples: ["Devin starting a React app dev server and testing UI changes in its built-in browser", "Devin screenshotting a running app to verify visual correctness"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai"]
+    },
+    {
+      feature_id: "mcp-support",
+      support_level: "no",
+      notes: "Devin does not support MCP (Model Context Protocol) servers. It has its own tool ecosystem (shell, browser, editor) within the cloud sandbox but does not use the MCP standard for external tool integration.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "planner-strategy",
+      support_level: "yes",
+      notes: "Devin generates a detailed plan before starting implementation, showing it to the user in the session dashboard. The user can review, edit, or approve the plan before Devin begins executing. This planning step is a core part of the Devin workflow.",
+      examples: ["Devin presenting a multi-step implementation plan with file changes and testing steps", "User editing the plan to clarify requirements before Devin starts"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai"]
+    },
+    {
+      feature_id: "supports-scoped-instructions",
+      support_level: "partial",
+      notes: "Devin's Playbooks allow task-type-level instruction scoping, but not directory or file-pattern scoping. Different Playbooks can be applied to different types of tasks (e.g., frontend vs. backend).",
+      examples: ["Applying a frontend Playbook for React tasks vs. a backend Playbook for API tasks"],
+      last_verified: "2026-03-16",
+      sources: ["https://devin.ai/docs/playbooks"]
+    }
+  ]
+}

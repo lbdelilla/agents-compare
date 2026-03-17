@@ -5,11 +5,11 @@
   feature_support: [
     {
       feature_id: "mcp-support",
-      support_level: "no",
-      notes: "GitHub Copilot does not support MCP (Model Context Protocol) as it's primarily focused on code completion within supported IDEs.",
-      examples: [],
-      last_verified: "2024-01-15",
-      sources: ["https://docs.github.com/en/copilot"]
+      support_level: "yes",
+      notes: "GitHub Copilot supports MCP (Model Context Protocol) servers in VS Code, JetBrains, and Xcode, available in Agent Mode. Users can connect MCP tools directly from the Copilot panel.",
+      examples: ["Connecting to a database via MCP in Agent Mode", "Using custom MCP tools for repository analysis"],
+      last_verified: "2026-03-16",
+      sources: ["https://github.blog/changelog/2025/04/04/github-copilot-now-supports-mcp-servers-in-public-preview-in-vs-code/"]
     },
     {
       feature_id: "context-window",
@@ -21,27 +21,27 @@
     },
     {
       feature_id: "claude3-support",
-      support_level: "no",
-      notes: "GitHub Copilot uses OpenAI's Codex models (GPT-3.5/GPT-4 based), not Claude 3 models.",
-      examples: [],
-      last_verified: "2024-01-15",
-      sources: ["https://docs.github.com/en/copilot"]
+      support_level: "yes",
+      notes: "GitHub Copilot now supports multiple models including Claude Sonnet 4.5/4.6, Claude Haiku 4.5, and Claude Opus 4.6, alongside GPT-4o, GPT-4.1, and Gemini 2.0. Users can switch models from the Copilot model picker.",
+      examples: ["Using Claude Sonnet 4.6 for complex refactoring in Agent Mode", "Switching to Claude Haiku 4.5 for faster completions"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot", "https://github.blog/changelog/2026/02/github-copilot-claude-model-support/"]
     },
     {
       feature_id: "filesystem-access",
-      support_level: "partial",
-      notes: "Can read files in the workspace for context but cannot directly create, modify, or delete files. Works through IDE integration.",
-      examples: ["Reading project files for better code suggestions"],
-      last_verified: "2024-01-15",
-      sources: ["https://docs.github.com/en/copilot/using-github-copilot"]
+      support_level: "yes",
+      notes: "In Agent Mode (GA in VS Code since February 2025), GitHub Copilot can autonomously create, modify, and delete files across the workspace without manual intervention.",
+      examples: ["Agent Mode creating new component files", "Autonomously refactoring multi-file codebases"],
+      last_verified: "2026-03-16",
+      sources: ["https://github.blog/news-insights/product-news/github-copilot-coding-agent-is-now-generally-available/"]
     },
     {
       feature_id: "planner-strategy",
-      support_level: "no",
-      notes: "GitHub Copilot doesn't have explicit planning capabilities. It provides suggestions based on immediate context rather than multi-step task planning.",
-      examples: [],
-      last_verified: "2024-01-15",
-      sources: ["https://docs.github.com/en/copilot"]
+      support_level: "yes",
+      notes: "Agent Mode (GA in VS Code since February 2025) and Copilot Workspace (GA for all Pro/Business/Enterprise subscribers) provide full multi-step planning: generating a plan, writing code, running tests, and iterating autonomously.",
+      examples: ["Using Copilot Workspace to plan and implement a new feature end-to-end", "Agent Mode breaking a task into steps and executing them autonomously"],
+      last_verified: "2026-03-16",
+      sources: ["https://github.blog/news-insights/product-news/github-copilot-coding-agent-is-now-generally-available/", "https://github.blog/news-insights/product-news/github-copilot-workspace-is-now-generally-available/"]
     },
     {
       feature_id: "automatic-context-awareness",
@@ -76,12 +76,12 @@
     },
     {
       feature_id: "claude-4-support",
-      support_level: "no",
-      notes: "GitHub Copilot is built on OpenAI's Codex model (based on GPT-3.5 and GPT-4), not Anthropic's Claude models. There is no support for Claude 4 or any Claude model family.",
-      examples: [],
-      last_verified: "2025-11-12",
+      support_level: "yes",
+      notes: "GitHub Copilot supports Claude Opus 4.6 (generally available as of February 2026) and Claude Sonnet 4.6 via the model picker. Users can select Claude models for different tasks directly in the Copilot chat panel.",
+      examples: ["Using Claude Opus 4.6 for complex architectural refactoring", "Selecting Claude Sonnet 4.6 for faster code generation tasks"],
+      last_verified: "2026-03-16",
       sources: [
-        "https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot"
+        "https://github.blog/changelog/2026/02/github-copilot-claude-model-support/"
       ]
     },
     {
@@ -96,22 +96,22 @@
     },
     {
       feature_id: "dedicated-instruction-file",
-      support_level: "no",
-      notes: "GitHub Copilot does not support dedicated instruction files like .cursorrules or AGENT.md. Configuration is limited to IDE settings and there's no file-based way to provide persistent instructions to the AI.",
-      examples: [],
-      last_verified: "2025-11-12",
+      support_level: "yes",
+      notes: "GitHub Copilot supports .github/copilot-instructions.md for repository-wide instructions in natural language Markdown. Generally available since 2025, it lets teams define coding standards, preferred libraries, and response styles.",
+      examples: ["Defining TypeScript naming conventions in copilot-instructions.md", "Setting project-specific architecture rules for all contributors"],
+      last_verified: "2026-03-16",
       sources: [
-        "https://docs.github.com/en/copilot/configuring-github-copilot"
+        "https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot"
       ]
     },
     {
       feature_id: "fine-grained-instruction-control",
-      support_level: "no",
-      notes: "GitHub Copilot offers limited customization options. You can enable/disable suggestions per language and block suggestions matching public code, but there's no support for fine-grained rules, glob patterns, or context-specific instructions.",
-      examples: [],
-      last_verified: "2025-11-12",
+      support_level: "partial",
+      notes: "Since November 2025, Copilot supports multiple .instructions.md files with YAML frontmatter to target specific paths or agents (e.g., applyTo: '**/*.ts'). However, glob pattern support is less flexible than Cursor's .cursor/rules system.",
+      examples: ["Applying strict null-check rules only to TypeScript files", "Setting different instructions for front-end vs back-end agents"],
+      last_verified: "2026-03-16",
       sources: [
-        "https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-settings-on-githubcom"
+        "https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot"
       ]
     },
     {
@@ -136,12 +136,12 @@
     },
     {
       feature_id: "supports-scoped-instructions",
-      support_level: "no",
-      notes: "GitHub Copilot does not support scoped instructions at global, project, or file levels. All configuration is done through IDE settings and applies uniformly across the workspace.",
-      examples: [],
-      last_verified: "2025-11-12",
+      support_level: "yes",
+      notes: "Copilot supports scoped instructions at repository level (.github/copilot-instructions.md), agent-specific level, and path-specific level via multiple .instructions.md files with YAML frontmatter (generally available since November 2025).",
+      examples: ["Repository-wide style guide in copilot-instructions.md", "Agent-specific instructions for the coding agent vs chat assistant"],
+      last_verified: "2026-03-16",
       sources: [
-        "https://docs.github.com/en/copilot/configuring-github-copilot"
+        "https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot"
       ]
     }
   ]

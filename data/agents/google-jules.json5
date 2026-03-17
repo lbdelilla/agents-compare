@@ -1,0 +1,52 @@
+{
+  "id": "google-jules",
+  "name": "Google Jules",
+  "aliases": ["Jules", "Jules by Google", "Google Jules agent"],
+  "provider": "Google",
+  "website": "https://jules.google",
+  "supported_ide": ["GitHub (web)", "Browser"],
+  "updated_at": "2026-03-16",
+  "description": "Google Jules is an asynchronous AI coding agent by Google, powered by Gemini 2.0. Unlike real-time pair programmers, Jules works autonomously in the background on GitHub issues and pull requests. You assign it a task (bug fix, feature, refactor), Jules clones your repo into a sandboxed cloud environment, implements the changes, runs tests, and opens a pull request for your review. Jules is in public beta as of early 2026.",
+  "faq": [
+    {
+      "question": "What is Google Jules and how does it work?",
+      "answer": "Jules is an asynchronous AI coding agent that works on GitHub issues and tasks in the background. You assign Jules a task — such as fixing a bug or implementing a feature — and it independently clones your repository into an isolated cloud environment, writes the code, runs tests, and opens a pull request for your review. You review and merge the PR when satisfied."
+    },
+    {
+      "question": "Which AI model powers Google Jules?",
+      "answer": "Jules is powered by Google's Gemini 2.0 model family. It uses Gemini 2.0 Flash for efficient task execution and can leverage Gemini 2.0 Pro for complex reasoning tasks."
+    },
+    {
+      "question": "Is Google Jules free to use?",
+      "answer": "Jules is currently in public beta (as of early 2026) and is free to use during the beta period. Pricing for general availability has not been announced. Access is available via jules.google with a Google account."
+    },
+    {
+      "question": "Does Jules work with any GitHub repository?",
+      "answer": "Jules integrates with GitHub and can work with any public or private GitHub repository you grant it access to. It clones your repo into a sandboxed cloud environment for each task, so it does not run on your local machine."
+    },
+    {
+      "question": "How is Jules different from GitHub Copilot or Cursor?",
+      "answer": "Jules is fundamentally asynchronous — you do not interact with it in real time. You assign a task and come back later to review a pull request. Tools like Copilot and Cursor work synchronously in your IDE as you type. Jules is better suited for delegating entire self-contained tasks rather than pair programming."
+    },
+    {
+      "question": "What kinds of tasks is Jules best at?",
+      "answer": "Jules excels at self-contained, well-defined tasks: fixing bugs from issue descriptions, implementing small features, writing or updating unit tests, updating dependencies, and performing code migrations. Tasks requiring interactive decisions or ambiguous requirements are better handled by synchronous agents."
+    },
+    {
+      "question": "Does Jules run tests before opening a pull request?",
+      "answer": "Yes. Jules runs the repository's existing test suite as part of its task execution in the sandboxed environment. It uses test results to validate its implementation and may iterate on the code if tests fail."
+    },
+    {
+      "question": "Can Jules access external APIs or databases?",
+      "answer": "Jules operates in a sandboxed cloud environment and does not have access to external services, live databases, or production systems. It works only with the code and tests in your repository."
+    },
+    {
+      "question": "Is Jules available outside the United States?",
+      "answer": "As of early 2026, Jules is in public beta with access open globally, though it initially launched in the United States. Availability may vary. Check jules.google for the latest access information."
+    },
+    {
+      "question": "Does Jules support languages other than English?",
+      "answer": "Jules understands task descriptions written in multiple languages, as Gemini 2.0 is a multilingual model. However, the Jules interface and documentation are primarily in English."
+    }
+  ]
+}

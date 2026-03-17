@@ -1,0 +1,119 @@
+// Support matrix for Amazon Q Developer AI coding agent
+// This file defines how well Amazon Q Developer supports various features
+{
+  agent_id: "amazon-q-developer",
+  feature_support: [
+    {
+      feature_id: "automatic-context-awareness",
+      support_level: "yes",
+      notes: "Amazon Q Developer automatically analyzes the current file, open files, and project structure to provide contextually relevant suggestions. In agent mode, it scans the full workspace to understand dependencies and architecture.",
+      examples: ["Generating AWS SDK calls based on the current project's detected cloud provider", "Suggesting relevant IAM policies based on the detected resource types in the project"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"]
+    },
+    {
+      feature_id: "broad-ide-integration",
+      support_level: "yes",
+      notes: "Supports VS Code, the full JetBrains family (IntelliJ IDEA, PyCharm, WebStorm, GoLand, etc.), Eclipse, and Visual Studio. Also integrates with the AWS Console web interface and AWS CLI.",
+      examples: ["Using Q Developer in IntelliJ IDEA for Java development", "Running Q Developer inline suggestions in VS Code"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/setting-up-ide.html"]
+    },
+    {
+      feature_id: "claude-4-support",
+      support_level: "no",
+      notes: "Amazon Q Developer uses Amazon's proprietary models, not Anthropic's Claude models. There is no support for Claude Sonnet 4.6, Claude Opus 4.6, or any Claude model family.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"]
+    },
+    {
+      feature_id: "claude3-support",
+      support_level: "no",
+      notes: "Amazon Q Developer uses Amazon's proprietary models. It does not support Claude 3 or any Anthropic model family.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"]
+    },
+    {
+      feature_id: "console-error-integration",
+      support_level: "no",
+      notes: "Amazon Q Developer does not include integrated browser or web preview functionality. It works within the IDE context and does not monitor browser console errors from running applications.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"]
+    },
+    {
+      feature_id: "context-window",
+      support_level: "partial",
+      notes: "Context window is focused on the current file and nearby project files. In agent mode, it scans the broader workspace. The exact token limit is not publicly disclosed but is smaller than Claude or GPT-based agents.",
+      examples: ["Analyzing current file and related imports for suggestions"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"]
+    },
+    {
+      feature_id: "dedicated-instruction-file",
+      support_level: "partial",
+      notes: "Amazon Q Developer supports custom instructions at the workspace level via settings, but does not have a dedicated file-based instruction system comparable to CLAUDE.md or .cursorrules.",
+      examples: ["Setting workspace-level coding preferences in IDE settings"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/customizations.html"]
+    },
+    {
+      feature_id: "filesystem-access",
+      support_level: "yes",
+      notes: "In agent mode, Amazon Q Developer can autonomously create, modify, and delete files across the workspace to implement features and fix issues.",
+      examples: ["Agent mode creating new service files to implement a requested feature", "Autonomously updating configuration files during a code transformation task"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/inline-suggestions.html"]
+    },
+    {
+      feature_id: "fine-grained-instruction-control",
+      support_level: "partial",
+      notes: "Amazon Q Developer allows some customization via administrator settings and workspace preferences, but lacks a glob-pattern or file-level instruction targeting system like Cursor's .cursor/rules.",
+      examples: ["Disabling suggestions for specific file types via settings"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/customizations.html"]
+    },
+    {
+      feature_id: "interactive-element-selection",
+      support_level: "no",
+      notes: "Amazon Q Developer does not support interactive UI element selection or visual editing. It operates purely within the code editor.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "live-web-preview",
+      support_level: "no",
+      notes: "Amazon Q Developer does not include a built-in web preview panel. It focuses on code editing and AWS service integration within the IDE.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "mcp-support",
+      support_level: "yes",
+      notes: "Amazon Q Developer supports MCP (Model Context Protocol) servers, enabling integration with external tools and data sources within the agent workflow.",
+      examples: ["Connecting Q Developer to an internal documentation MCP server", "Using an MCP tool to query AWS resource states during agent tasks"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/mcp.html"]
+    },
+    {
+      feature_id: "planner-strategy",
+      support_level: "yes",
+      notes: "Amazon Q Developer's agent mode breaks down complex tasks into a step-by-step plan, shows the plan to the user for approval, then executes the steps — creating files, writing code, and running tests autonomously.",
+      examples: ["Implementing a new REST API endpoint end-to-end across multiple files", "Upgrading a Java 8 application to Java 17 via Code Transformation"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/inline-suggestions.html"]
+    },
+    {
+      feature_id: "supports-scoped-instructions",
+      support_level: "partial",
+      notes: "Amazon Q Developer supports workspace-level and administrator-level instruction scopes, but does not provide file- or directory-level instruction scoping.",
+      examples: ["Setting organization-wide coding standards via admin console"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/customizations.html"]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+// Support matrix for Replit Agent AI coding agent
+// This file defines how well Replit Agent supports various features
+{
+  agent_id: "replit-agent",
+  feature_support: [
+    {
+      feature_id: "automatic-context-awareness",
+      support_level: "yes",
+      notes: "Replit Agent automatically reads the full project context within the Replit workspace, including all files, installed packages, database configuration, and environment variables. No manual context setup is required.",
+      examples: ["Agent understanding the existing Express API structure before adding a new endpoint", "Reading package.json and existing code before suggesting compatible changes"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.replit.com/replit-ai/agent"]
+    },
+    {
+      feature_id: "broad-ide-integration",
+      support_level: "no",
+      notes: "Replit Agent is exclusive to the Replit platform (browser-based IDE and Replit Desktop app). It does not have plugins for VS Code, JetBrains, or any other IDE. Users must work within Replit's environment.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: ["https://replit.com/ai"]
+    },
+    {
+      feature_id: "claude-4-support",
+      support_level: "yes",
+      notes: "Replit uses Anthropic Claude models as part of its model routing layer, including Claude Sonnet 4.6 and Claude Haiku 4.5 for code generation and agent tasks. The specific model used may vary by task type as Replit routes to the best available model.",
+      examples: ["Claude Sonnet 4.6 used for complex code generation tasks within Replit Agent"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.replit.com/replit-ai/models"]
+    },
+    {
+      feature_id: "claude3-support",
+      support_level: "yes",
+      notes: "Replit has historically used Claude 3 models (Haiku, Sonnet) as part of its AI stack. Claude 3.5 Sonnet has been available in Replit's model selection.",
+      examples: ["Using Claude 3.5 Sonnet for code generation in Replit"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.replit.com/replit-ai/models"]
+    },
+    {
+      feature_id: "console-error-integration",
+      support_level: "yes",
+      notes: "Replit Agent has access to the application's console output and runtime errors within the Replit environment. It can observe errors from running applications and iterate on the code to fix them automatically.",
+      examples: ["Agent detecting a runtime TypeError in the console and fixing the underlying code", "Automatically reading build errors and resolving dependency issues"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.replit.com/replit-ai/agent"]
+    },
+    {
+      feature_id: "context-window",
+      support_level: "yes",
+      notes: "Replit Agent maintains context over the full project within the Replit workspace. It uses the context window of the underlying model (up to 200K tokens with Claude Sonnet 4.6) and Replit's own context management to handle large projects.",
+      examples: ["Processing a full Node.js project including all source files and configuration"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.replit.com/replit-ai/agent"]
+    },
+    {
+      feature_id: "dedicated-instruction-file",
+      support_level: "partial",
+      notes: "Replit does not have an officially named instruction file (like CLAUDE.md). However, you can add a README or custom context file that Replit Agent reads. System-level instructions can also be provided via the agent chat before starting a task.",
+      examples: ["Adding a README with project conventions that Replit Agent reads as context"],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "filesystem-access",
+      support_level: "yes",
+      notes: "Replit Agent has full access to the Replit workspace filesystem. It can create, edit, and delete files, install npm or pip packages, and modify any project file as part of task execution.",
+      examples: ["Agent creating new component files, updating configuration, and installing dependencies in one task", "Replit Agent deleting unused files as part of a cleanup task"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.replit.com/replit-ai/agent"]
+    },
+    {
+      feature_id: "fine-grained-instruction-control",
+      support_level: "no",
+      notes: "Replit Agent does not support file-pattern or directory-level instruction targeting. All instructions are provided globally via the agent chat or project context.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "interactive-element-selection",
+      support_level: "no",
+      notes: "Replit Agent does not support visual UI element selection. Users interact with the agent via chat, not by clicking on rendered UI elements.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "live-web-preview",
+      support_level: "yes",
+      notes: "Replit provides a built-in web preview panel that renders the running application in real time. Changes made by Replit Agent are reflected immediately in the web preview, allowing developers to see results without leaving the Replit IDE.",
+      examples: ["Viewing a React app update in the Replit web preview after agent makes changes", "Previewing an API response in the embedded browser panel"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.replit.com/replit-ide/workspace-features/webview"]
+    },
+    {
+      feature_id: "mcp-support",
+      support_level: "no",
+      notes: "Replit Agent does not support MCP (Model Context Protocol) servers. It operates within Replit's own tool ecosystem (shell, editor, webview, database) and does not use the MCP standard for external tool integration.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    },
+    {
+      feature_id: "planner-strategy",
+      support_level: "yes",
+      notes: "Replit Agent presents a structured plan of steps before beginning implementation. Users can review the planned actions (files to create, packages to install, etc.) and the agent proceeds step by step, showing progress in the chat panel.",
+      examples: ["Replit Agent listing the files it will create and packages it will install before starting", "Step-by-step progress shown as the agent builds a full-stack app"],
+      last_verified: "2026-03-16",
+      sources: ["https://docs.replit.com/replit-ai/agent"]
+    },
+    {
+      feature_id: "supports-scoped-instructions",
+      support_level: "no",
+      notes: "Replit Agent does not support scoped or hierarchical instruction systems. All instructions are global to the project and provided via the agent chat.",
+      examples: [],
+      last_verified: "2026-03-16",
+      sources: []
+    }
+  ]
+}

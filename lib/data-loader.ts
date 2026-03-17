@@ -41,10 +41,11 @@ export async function loadFeatures(): Promise<Feature[]> {
 
 export async function loadAgentFeatureSupport(agentId?: string, featureId?: string): Promise<AgentFeatureSupport[]> {
   const supportDir = join(DATA_DIR, 'support')
-  const agents = ['cursor', 'windsurf', 'claude-code', 'github-copilot']
-  
+  const index = await loadIndex()
+  const agents = index.agents
+
   let allSupport: AgentFeatureSupport[] = []
-  
+
   // Load support data from each agent's file
   for (const agent of agents) {
     try {

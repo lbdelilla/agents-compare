@@ -1,11 +1,12 @@
 {
   "id": "windsurf",
   "name": "Windsurf",
-  "aliases": ["Windsurf IDE", "Codeium Windsurf"],
-  "provider": "Codeium",
+  "aliases": ["Windsurf IDE", "Cognition Windsurf"],
+  "provider": "Cognition AI",
   "website": "https://windsurf.com",
   "supported_ide": ["Windsurf (custom IDE)"],
-  "description": "An AI-first code editor with deep integration of language models for autonomous coding tasks and intelligent assistance.",
+  "description": "An AI-first code editor with deep integration of language models for autonomous coding tasks and intelligent assistance. Formerly developed by Codeium, Windsurf was acquired by Cognition AI in December 2025.",
+  "updated_at": "2026-03-16",
   "faq": [
     {
       "question": "What makes Windsurf different from other AI coding assistants?",
@@ -13,7 +14,7 @@
     },
     {
       "question": "Which AI models does Windsurf use?",
-      "answer": "Windsurf uses Codeium's proprietary models along with support for Claude 3 and other leading language models. The specific model can be selected based on the task at hand."
+      "answer": "Windsurf supports a range of models including Claude Sonnet 4.5/4.6, Claude Opus 4.6, and other leading language models. Since its acquisition by Cognition AI in December 2025, model availability may have evolved — check windsurf.com/changelog for the latest."
     },
     {
       "question": "Is Windsurf free to use?",
@@ -57,7 +58,7 @@
     },
     {
       "question": "Can I use Windsurf offline?",
-      "answer": "Basic editing is possible offline, but AI features require an internet connection to communicate with Codeium's servers."
+      "answer": "Basic editing is possible offline, but AI features require an internet connection to communicate with Cognition AI's servers."
     },
     {
       "question": "How does Windsurf handle large codebases or complex projects?",
@@ -65,7 +66,7 @@
     },
     {
       "question": "What kind of support does Windsurf offer for users?",
-      "answer": "Support is available through the Windsurf Discord, Codeium Subreddit, and official documentation. Enterprise users may have additional support options."
+      "answer": "Support is available through the Windsurf Discord, official documentation at windsurf.com, and Cognition AI's support channels. Enterprise users may have additional support options."
     },
     {
       "question": "Can Windsurf generate documentation for my code?",

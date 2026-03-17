@@ -4,12 +4,13 @@
   "aliases": ["Cursor.sh", "Cursor AI", "Cursor Editor"],
   "provider": "Cursor.sh",
   "website": "https://cursor.com",
-  "supported_ide": ["VSCode (fork)"],
-  "description": "A VSCode-based AI agent for editing, refactoring, and task-based coding with powerful autocomplete and chat features.",
+  "supported_ide": ["VSCode (fork)", "JetBrains (via ACP)"],
+  "updated_at": "2026-03-16",
+  "description": "A VSCode-based AI agent for editing, refactoring, and task-based coding with powerful autocomplete and chat features. Cursor 2.0 added an integrated browser with live preview and Chrome DevTools; Cursor 2.2 added a Visual Editor for drag-and-drop UI manipulation. Also available in JetBrains IDEs via Agent Client Protocol.",
   "faq": [
     {
       "question": "What models does Cursor support?",
-      "answer": "Cursor supports Claude 3 (Opus, Sonnet, Haiku), GPT-4, GPT-4 Turbo, and other OpenAI models. You can switch between models based on your task requirements."
+      "answer": "Cursor supports a wide range of frontier models including Claude Sonnet 4.6, Claude Opus 4.6, Claude Haiku 4.5, GPT-4.1, GPT-4o, and Gemini 2.0. You can switch between models per conversation based on your task requirements."
     },
     {
       "question": "How does Cursor differ from GitHub Copilot?",
@@ -25,11 +26,11 @@
     },
     {
       "question": "Which AI models does Cursor use?",
-      "answer": "Cursor uses a mix of purpose-built models and frontier models from OpenAI (e.g., GPT-4) and Anthropic (e.g., Claude), allowing users to select models for specific tasks."
+      "answer": "Cursor uses a mix of frontier models from Anthropic (Claude Sonnet 4.6, Opus 4.6, Haiku 4.5), OpenAI (GPT-4.1, GPT-4o), and Google (Gemini 2.0), allowing users to select models for specific tasks."
     },
     {
       "question": "Is Cursor free to use, and what are the limitations of the free tier?",
-      "answer": "Cursor offers a's free Hobby plan with limited agent requests and tab completions, including a two-week Pro plan trial. See https://cursor.com/en/pricing for details."
+      "answer": "Cursor offers a free Hobby plan with limited usage. Paid plans use a credit-based system (since June 2025): Pro at $20/month, Pro+ at $60/month (3x credits), and Ultra at $200/month (20x credits). Business is $40/user/month with team admin features. See https://cursor.com/pricing for details."
     },
     {
       "question": "Can Cursor work with my existing codebases, including private repositories?",
@@ -61,7 +62,7 @@
     },
     {
       "question": "How does Cursor's pricing compare to other AI coding tools?",
-      "answer": "Cursor's free Hobby plan is competitive, with Pro plans at $20/month. This is comparable to GitHub Copilot ($10/month) and slightly more than Windsurf ($15/seat for teams)."
+      "answer": "Cursor's Pro plan is $20/month using a credit-based system. GitHub Copilot Pro is $10/month (cheapest entry point). Windsurf Pro is $15/month. For power users, Cursor Pro+ ($60/month) and Ultra ($200/month) offer higher credit pools. See https://cursor.com/pricing for the latest."
     },
     {
       "question": "Is there a way to customize Cursor's suggestions or behavior?",
@@ -77,7 +78,15 @@
     },
     {
       "question": "What kind of support does Cursor offer for users?",
-      "answer": "Support is available through Cursor's GitHub repository, official documentation, and Anysphere's support channels, with enhanced options for Pro and Enterprise users."
+      "answer": "Support is available through Cursor's GitHub repository, official documentation at cursor.com/docs, and Anysphere's support channels, with enhanced options for Pro and Enterprise users."
+    },
+    {
+      "question": "What are Background Agents in Cursor?",
+      "answer": "Background Agents (available since Cursor 0.50+) allow you to run multiple AI agent tasks in parallel, each in its own isolated environment. You can kick off a long-running task and continue coding while the agent works independently, then review results when it's done."
+    },
+    {
+      "question": "Does Cursor have a built-in browser or web preview?",
+      "answer": "Yes. Cursor 2.0 (November 2025) introduced an integrated browser panel with Chrome DevTools access. You can see your running web application live inside the editor, and the AI agent can directly read console errors and network requests to debug issues."
     }
   ]
 }

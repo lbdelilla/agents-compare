@@ -1,0 +1,52 @@
+{
+  "id": "zed-ai",
+  "name": "Zed AI",
+  "aliases": ["Zed", "Zed Editor AI", "Zed Assistant"],
+  "provider": "Zed Industries",
+  "website": "https://zed.dev",
+  "supported_ide": ["Zed"],
+  "updated_at": "2026-03-16",
+  "description": "Zed AI is the AI assistant built natively into the Zed code editor, a high-performance, GPU-accelerated collaborative editor written in Rust. Zed AI supports inline editing, an AI chat panel, multi-model selection (Claude, GPT-4, Gemini), and an agentic mode that can autonomously edit files, run terminal commands, and use MCP tools. Zed is designed for speed and collaboration, with multiplayer editing capabilities.",
+  "faq": [
+    {
+      "question": "What is Zed AI and how does it differ from other AI coding tools?",
+      "answer": "Zed AI is the AI layer built directly into the Zed code editor — it is not a plugin or extension but a first-class feature of the editor itself. Zed is built in Rust for maximum performance, and its AI features include inline editing, an AI assistant panel, and an agentic mode. Unlike tools like Cursor (which is VS Code-based) or Claude Code (which is terminal-based), Zed AI runs inside a native GPU-accelerated editor."
+    },
+    {
+      "question": "Which AI models does Zed AI support?",
+      "answer": "Zed AI supports multiple models via a model picker: Anthropic's Claude Sonnet 4.6 and Opus 4.6, OpenAI's GPT-4o and o3, Google's Gemini 2.0 Flash and Pro, and local models via Ollama. Users can switch models per conversation. Some models require a Zed Pro subscription; others require your own API key."
+    },
+    {
+      "question": "Is Zed AI free to use?",
+      "answer": "Zed offers a free tier that includes a limited number of AI completions per month powered by Claude. The Zed Pro plan ($20/month) provides unlimited AI usage and access to all supported models. You can also bring your own API key (BYOK) for any supported provider to use your own quota."
+    },
+    {
+      "question": "What is Zed's agentic mode?",
+      "answer": "Zed's agentic mode (available from Zed 0.170+) allows the AI assistant to autonomously edit files, run terminal commands, and use MCP-connected tools to complete multi-step coding tasks. It operates within the editor with user approval at key steps."
+    },
+    {
+      "question": "Does Zed AI support MCP (Model Context Protocol)?",
+      "answer": "Yes. Zed supports MCP servers, allowing the AI assistant to connect to external tools such as databases, APIs, documentation servers, and custom tooling. MCP tools appear as callable functions in the assistant panel and agentic mode."
+    },
+    {
+      "question": "Does Zed support multiplayer or collaborative coding?",
+      "answer": "Yes. Zed was built from the ground up for real-time multiplayer editing — multiple developers can edit the same file simultaneously, similar to Google Docs. This collaboration layer is separate from Zed AI but can be combined with it."
+    },
+    {
+      "question": "Can I use Zed AI with local models?",
+      "answer": "Yes. Zed integrates with Ollama, allowing you to run local models (like Llama 3, Mistral, Phi, etc.) entirely on your machine with no API costs or data transmission. Configure Ollama as a provider in Zed's settings."
+    },
+    {
+      "question": "Which operating systems does Zed support?",
+      "answer": "Zed supports macOS (native) and Linux. A Windows version is in development as of 2026. Zed is not available as a web app or browser extension."
+    },
+    {
+      "question": "How does Zed AI compare to Cursor?",
+      "answer": "Both offer inline AI editing and multi-model support, but their foundations differ. Cursor is built on VS Code and inherits its vast extension ecosystem. Zed is a fully custom, high-performance Rust editor that is much faster but has a smaller extension ecosystem. Zed has native multiplayer; Cursor does not. Cursor has a more mature agentic experience as of early 2026."
+    },
+    {
+      "question": "Does Zed AI have an instruction file for project-specific context?",
+      "answer": "Yes. You can add a .rules file (or use the 'Context Servers' feature via MCP) to give Zed persistent project-level instructions. Zed's assistant also reads open files and project context automatically when answering questions."
+    }
+  ]
+}
