@@ -16,16 +16,16 @@
     "supports-scoped-instructions"
   ],
   "agents": [
+    "aider",
+    "amazon-q-developer",
     "claude-code",
     "cursor",
-    "github-copilot",
-    "windsurf",
-    "amazon-q-developer",
-    "aider",
-    "zed-ai",
-    "google-jules",
     "devin-ai",
-    "replit-agent"
+    "github-copilot",
+    "google-jules",
+    "replit-agent",
+    "windsurf",
+    "zed-ai"
   ],
   "comparisons": [
     "claude-code-vs-cursor",

@@ -179,7 +179,7 @@ export function ComparisonTable({
             {/* Table Header */}
             <thead className="bg-gray-700 sticky top-0 z-10">
               <tr>
-                <th className="sticky left-0 z-20 bg-gray-700 px-6 py-4 text-left text-sm font-medium text-gray-300 border-r border-gray-600">
+                <th className="sticky left-0 z-20 bg-gray-700 px-6 py-4 text-left text-sm font-medium text-gray-300 border-r border-gray-600 min-w-[280px]">
                   Feature
                 </th>
                 {filteredAgents.map(agent => {
@@ -246,7 +246,7 @@ export function ComparisonTable({
                               className="block hover:text-blue-400 transition-colors"
                             >
                               <div className="font-medium">{feature.name}</div>
-                              <div className="text-xs text-gray-400 mt-1 line-clamp-2">{feature.description}</div>
+                              <div className="text-xs text-gray-400 mt-1">{feature.description}</div>
                               <div className="text-xs text-green-400 mt-1">
                                 {stats.supported + stats.partial}/{stats.total} agents
                               </div>
